@@ -129,7 +129,7 @@ RULES:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-3-pro",
+                model="gemini-2.5-pro",
                 contents=[
                     types.Content(role="user", parts=[
                         types.Part.from_bytes(data=audio_content, mime_type=mime_type),
@@ -170,7 +170,7 @@ RULES:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-3-pro",
+                model="gemini-2.5-pro",
                 contents=[types.Content(role="user", parts=[types.Part.from_text(text=prompt)])],
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
